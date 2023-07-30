@@ -42,6 +42,44 @@
         </div>
 
         <div class="form-group">
+          <label for="inputPhoto" class="col-form-label">Footer Logo <span class="text-danger">*</span></label>
+          <div class="input-group">
+              <span class="input-group-btn">
+                  <a id="lfm2" data-input="thumbnail2" data-preview="holder2" class="btn btn-primary">
+                  <i class="fa fa-picture-o"></i> Choose
+                  </a>
+              </span>
+          <input id="thumbnail11" class="form-control" type="text" name="footer_logo" value="{{$data->footer_logo}}">
+        </div>
+        <div id="holder2" style="margin-top:15px;max-height:100px;"></div>
+
+          @error('footer_logo')
+          <span class="text-danger">{{$message}}</span>
+          @enderror
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="inputPhoto" class="col-form-label">White Logo <span class="text-danger">*</span></label>
+          <div class="input-group">
+              <span class="input-group-btn">
+                  <a id="lfm3" data-input="thumbnail3" data-preview="holder3" class="btn btn-primary">
+                  <i class="fa fa-picture-o"></i> Choose
+                  </a>
+              </span>
+          <input id="thumbnail3" class="form-control" type="text" name="white_logo" value="{{$data->white_logo}}">
+        </div>
+        <div id="holder3" style="margin-top:15px;max-height:100px;"></div>
+
+          @error('white_logo')
+          <span class="text-danger">{{$message}}</span>
+          @enderror
+        </div>
+
+
+
+        <div class="form-group">
           <label for="inputPhoto" class="col-form-label">Photo <span class="text-danger">*</span></label>
           <div class="input-group">
               <span class="input-group-btn">
@@ -102,6 +140,8 @@
 <script>
     $('#lfm').filemanager('image');
     $('#lfm1').filemanager('image');
+    $('#lfm2').filemanager('image');
+    $('#lfm3').filemanager('image');
     $(document).ready(function() {
     $('#summary').summernote({
       placeholder: "Write short description.....",
